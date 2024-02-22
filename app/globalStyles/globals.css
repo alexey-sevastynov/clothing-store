@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  background-color: #1D2533;
+  color: #e8e9ea;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1535px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn-reset {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.overflow-hidden {
+  overflow-y: hidden;
+  padding-right: 8px;
+}
+
+/* connect the fonts locally */
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../public/fonts/Raleway-Regular.ttf') format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../public/fonts/Raleway-Medium.ttf') format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../public/fonts/Raleway-Bold.ttf') format("ttf");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100;
+  src: url('../../public/fonts/Raleway-Thin.ttf') format("ttf");
+}

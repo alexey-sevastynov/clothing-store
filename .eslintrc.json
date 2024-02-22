@@ -1,4 +1,4 @@
-// commit #2 "added: yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier prettier"
+// commit(8308ea5) "project setup" "added: yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-prettier prettier"
 
 {
   "parser": "@typescript-eslint/parser", // Using TypeScript parser for code analysis

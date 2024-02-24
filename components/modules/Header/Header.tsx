@@ -14,6 +14,7 @@ import { FaRegCircleUser } from 'react-icons/fa6';
 import { useLang } from '@/hooks/useLang';
 
 import Logo from '@/components/elements/Logo/Logo';
+import Menu from './Menu';
 
 const Header = () => {
   const { lang, translations } = useLang();
@@ -24,6 +25,7 @@ const Header = () => {
           <FiAlignJustify />
           {translations[lang].header.menu_btn}
         </button>
+        <Menu />
         <div className='header__logo'>
           <Logo />
         </div>

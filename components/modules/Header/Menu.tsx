@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { useUnit } from 'effector-react';
-import { $menuIsOpen } from '@/context/modals';
+import { $menuIsOpen, closeMenu } from '@/context/modals';
 
+import { removeOverflowHiddenFromBody } from '@/lib/utils/common';
 import { useLang } from '@/hooks/useLang';
+
+import { IoMdClose } from 'react-icons/io';
 
 const Menu = () => {
   const { lang, translations } = useLang();
@@ -14,7 +17,22 @@ const Menu = () => {
   const [showBuyersList, setShowBuyersList] = React.useState(false);
   const [showContactsList, setShowContactsList] = React.useState(false);
 
-  return <nav className={`menu ${menuIsOpen ? 'open' : 'close'}`}>Menu</nav>;
+  const handleCloseMenu = () => {
+    removeOverflowHiddenFromBody();
+    closeMenu();
+  };
+
+  return (
+    <nav className={`menu ${menuIsOpen ? 'open' : 'close'}`}>
+      <button
+        className={`btn-reset menu__close ${menuIsOpen ? 'open' : ''}`}
+        onClick={handleCloseMenu}
+      >
+        <IoMdClose size={24} />
+      </button>
+      Menu
+    </nav>
+  );
 };
 
 export default Menu;

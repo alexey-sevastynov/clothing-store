@@ -1,6 +1,12 @@
 :root {
   --background: #1D2533;
+  --background-darkest: #111720;
 
   --font: #e8e9ea;
-  --font-hover: rgb(181, 230, 251)
+  --font-hover: rgb(181, 230, 251);
+
+
+  --scroll-background: #e8e9ea;
+  --scroll: rgb(132, 218, 254);
+  --scroll-hover: rgb(107, 208, 251);
 }

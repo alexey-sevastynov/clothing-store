@@ -1,7 +1,9 @@
 'use client';
+
 import React from 'react';
-import '@/app/globalStyles/header.css';
+
 import Link from 'next/link';
+
 import { FiAlignJustify } from 'react-icons/fi';
 import { IoIosSearch } from 'react-icons/io';
 import {
@@ -13,15 +15,24 @@ import { FaRegCircleUser } from 'react-icons/fa6';
 
 import { useLang } from '@/hooks/useLang';
 
+import { addOverflowHiddenToBody } from '@/lib/utils/common';
+
+import { openMenu } from '@/context/modals';
+
 import Logo from '@/components/elements/Logo/Logo';
 import Menu from './Menu';
 
 const Header = () => {
   const { lang, translations } = useLang();
+
+  const handleOpenMenu = () => {
+    addOverflowHiddenToBody();
+    openMenu();
+  };
   return (
     <header className='header'>
       <div className='container header__container'>
-        <button className='btn-reset header__burger'>
+        <button className='btn-reset header__burger' onClick={handleOpenMenu}>
           <FiAlignJustify />
           {translations[lang].header.menu_btn}
         </button>

@@ -8,6 +8,9 @@ import { useLang } from '@/hooks/useLang';
 
 import { IoMdClose } from 'react-icons/io';
 
+import { setLang } from '@/context/lang';
+import { AllowedLangs } from '@/constants/lang';
+
 const Menu = () => {
   const { lang, translations } = useLang();
 
@@ -16,6 +19,15 @@ const Menu = () => {
   const [showCatalogList, setShowCatalogList] = React.useState(false);
   const [showBuyersList, setShowBuyersList] = React.useState(false);
   const [showContactsList, setShowContactsList] = React.useState(false);
+
+  const handleSwitchLang = (lang: string) => {
+    setLang(lang as AllowedLangs);
+    localStorage.setItem('lang', JSON.stringify(lang));
+  };
+
+  const handleSwitchToRu = () => handleSwitchLang('ru');
+  const handleSwitchToUa = () => handleSwitchLang('ua');
+  const handleSwitchToEn = () => handleSwitchLang('en');
 
   const handleCloseMenu = () => {
     removeOverflowHiddenFromBody();
@@ -30,7 +42,26 @@ const Menu = () => {
       >
         <IoMdClose size={24} />
       </button>
-      Menu
+      <div className={`menu__lang ${menuIsOpen ? 'open' : ''}`}>
+        <button
+          className={`menu__lang_btn ${lang === 'en' ? 'lang-active' : ''}`}
+          onClick={handleSwitchToEn}
+        >
+          EN
+        </button>
+        <button
+          className={`menu__lang_btn ${lang === 'ua' ? 'lang-active' : ''}`}
+          onClick={handleSwitchToUa}
+        >
+          UA
+        </button>
+        <button
+          className={`menu__lang_btn ${lang === 'ru' ? 'lang-active' : ''}`}
+          onClick={handleSwitchToRu}
+        >
+          RU
+        </button>
+      </div>
     </nav>
   );
 };

@@ -21,6 +21,8 @@
 
 .menu__container {
   position: relative;
+
+  padding-top: 58px;
 }
 
 .menu::before {
@@ -60,6 +62,14 @@
   right: -105px;
 }
 
+/* ____________logotype */
+
+.menu__logo {
+  opacity: 0;
+  margin-bottom: 150px;
+  transform: translate3d(var(--translate-values-start));
+}
+
 /* ____________icon close */
 
 .menu__close {
@@ -83,7 +93,8 @@
 
 .menu__close.open,
 .menu__lang.open,
-.menu__bg.open {
+.menu__bg.open,
+.menu__logo.open {
   opacity: 1;
   transform: translate(var(--translate-values-finish));
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;

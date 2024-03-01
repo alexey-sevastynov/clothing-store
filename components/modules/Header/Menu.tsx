@@ -11,6 +11,8 @@ import { IoMdClose } from 'react-icons/io';
 import { setLang } from '@/context/lang';
 import { AllowedLangs } from '@/constants/lang';
 
+import Logo from '@/components/elements/Logo/Logo';
+
 const Menu = () => {
   const { lang, translations } = useLang();
 
@@ -44,6 +46,11 @@ const Menu = () => {
           alt='promo image'
           height={800}
         />
+
+        <div className={`menu__logo ${menuIsOpen ? 'open' : ''}`}>
+          <Logo />
+        </div>
+
         <button
           className={`btn-reset menu__close ${menuIsOpen ? 'open' : ''}`}
           onClick={handleCloseMenu}

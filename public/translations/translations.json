@@ -2,16 +2,106 @@
   "en": {
     "header": {
       "menu_btn": "Menu"
+    },
+    "main_menu": {
+      "catalog": "Catalog",
+      "buyers": "For buyers",
+      "contacts": "Contacts",
+      "clothes": "Cloth",
+      "accessories": "Accessories",
+      "souvenirs": "Spuvenirs",
+      "office": "Office",
+      "all": "All catalog",
+      "about": "About",
+      "blog": "Blog",
+      "shipping": "Shipping and payment",
+      "returns": "Purchase returns",
+      "telegram": "Telegram",
+      "mail": "Mail"
+    },
+    "comparison": {
+      "umbrellas": "Umbrellas",
+      "bags": "Bags",
+      "outerwear": "Outewear",
+      "long-sleeves": "Long-sleeves",
+      "headdress": "Headdress",
+      "hoodie": "Hoodie",
+      "business-souvenirs": "Business-souvenirs",
+      "promotional-souvenirs": "promotional-souvenirs",
+      "pens": "Pens",
+      "notebooks": "Notebooks",
+      "t-shirts": "T-shirts",
+      "main-heading": "Comparison"
     }
   },
   "ru": {
     "header": {
       "menu_btn": "Меню"
+    },
+    "main_menu": {
+      "catalog": "Каталог",
+      "buyers": "Для покупателей",
+      "contacts": "Контакты",
+      "clothes": "Одежда",
+      "accessories": "Аксессуары",
+      "souvenirs": "Сувениры",
+      "office": "Концелярия",
+      "all": "Весь каталог",
+      "about": "О нас",
+      "blog": "Блог",
+      "shipping": "Доставка и оплата",
+      "returns": "Возврат покупок",
+      "telegram": "Telegram",
+      "mail": "Почта"
+    },
+    "comparison": {
+      "umbrellas": "Зонты",
+      "bags": "Сумки",
+      "outerwear": "Верхняя одежда",
+      "long-sleeves": "Длинные рукава",
+      "headdress": "Головной убор",
+      "hoodie": "Толстовка",
+      "business-souvenirs": "Бизнес-сувениры",
+      "promotional-souvenirs": "Рекламно-сувенирная продукция",
+      "pens": "Ручки",
+      "notebooks": "Блокноты",
+      "t-shirts": "Футболки",
+      "main-heading": "Сравнение"
     }
   },
   "ua": {
     "header": {
       "menu_btn": "Меню"
+    },
+    "main_menu": {
+      "catalog": "Каталог",
+      "buyers": "Для покупців",
+      "contacts": "Контакти",
+      "clothes": "Одяг",
+      "accessories": "Аксесуари",
+      "souvenirs": "Сувеніри",
+      "office": "Концелярія",
+      "all": "Весь каталог",
+      "about": "Про нас",
+      "blog": "Блог",
+      "shipping": "Доставка та оплата",
+      "returns": "Повернення покупок",
+      "telegram": "Telegram",
+      "mail": "Пошта"
+    },
+    "comparison": {
+      "umbrellas": "Парасолі",
+      "bags": "Сумки",
+      "outerwear": "Верхній одяг",
+      "long-sleeves": "Довгі рукави",
+      "headdress": "Головний убір",
+      "hoodie": "Толстовка",
+      "business-souvenirs": "Бізнес-сувеніри",
+      "promotional-souvenirs": "Рекламно-сувенірна продукція",
+      "pens": "Ручки",
+      "notebooks": "Блокноти",
+      "t-shirts": "Футболки",
+      "main-heading": "Порівняння"
     }
   }
 }

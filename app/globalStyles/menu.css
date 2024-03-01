@@ -19,6 +19,10 @@
 
 }
 
+.menu__container {
+  position: relative;
+}
+
 .menu::before {
   content: '';
   position: absolute;
@@ -47,6 +51,15 @@
   animation: menu-animation 0.8s ease-out forwards;
 }
 
+/* ____________background image */
+
+.menu__bg {
+  opacity: 0;
+  position: absolute;
+  top: -80px;
+  right: -105px;
+}
+
 /* ____________icon close */
 
 .menu__close {
@@ -69,7 +82,8 @@
 }
 
 .menu__close.open,
-.menu__lang.open {
+.menu__lang.open,
+.menu__bg.open {
   opacity: 1;
   transform: translate(var(--translate-values-finish));
   transition: transform 0.2s ease-out, opacity 0.2s ease-out;
@@ -102,14 +116,14 @@
 }
 
 .menu__lang_btn.lang-active {
-  background-color: var(--icons-hover);
-  color: var(--font-dark);
+  border-color: var(--scroll);
+  color: var(--font-hover);
+
 }
 
 .menu__lang_btn:hover {
+  border-color: var(--scroll-hover);
   transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  background-color: var(--icons-hover);
-  color: var(--font-dark);
 }
 
 /* ____________scroll */

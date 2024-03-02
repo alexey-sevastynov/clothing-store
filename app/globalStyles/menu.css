@@ -228,7 +228,11 @@
   height: 2px;
   top: 10px;
   left: -170px;
+
+  animation: fadeIn 1s forwards;
 }
+
+
 
 .menu__accordion_item-title:hover {
   transition: 0.2s ease-in-out color;
@@ -287,5 +291,15 @@
     height: 100%;
     padding-bottom: 0;
     border-radius: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 224px;
   }
 }

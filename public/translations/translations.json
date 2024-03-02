@@ -1,5 +1,8 @@
 {
   "en": {
+    "common": {
+      "more": "More"
+    },
     "header": {
       "menu_btn": "Menu"
     },
@@ -7,9 +10,9 @@
       "catalog": "Catalog",
       "buyers": "For buyers",
       "contacts": "Contacts",
-      "clothes": "Cloth",
+      "clothes": "Clothes",
       "accessories": "Accessories",
-      "souvenirs": "Spuvenirs",
+      "souvenirs": "Souvenirs",
       "office": "Office",
       "all": "All catalog",
       "about": "About",
@@ -32,9 +35,26 @@
       "notebooks": "Notebooks",
       "t-shirts": "T-shirts",
       "main-heading": "Comparison"
+    },
+    "breadcrumbs": {
+      "main": "Main",
+      "comparison": "Comparison",
+      "cart": "Cart",
+      "favorites": "Favorites",
+      "catalog": "Catalog",
+      "profile": "Profile",
+      "clothes": "Clothes",
+      "accessories": "Accessories",
+      "office": "Office",
+      "souvenirs": "Souvenirs",
+      "order": "Placing an order"
     }
   },
+
   "ru": {
+    "common": {
+      "more": "Еще"
+    },
     "header": {
       "menu_btn": "Меню"
     },
@@ -67,9 +87,26 @@
       "notebooks": "Блокноты",
       "t-shirts": "Футболки",
       "main-heading": "Сравнение"
+    },
+    "breadcrumbs": {
+      "main": "Главная",
+      "comparison": "Сравнение",
+      "cart": "Корзина",
+      "favorites": "Избранное",
+      "catalog": "Каталог",
+      "profile": "Профиль",
+      "clothes": "Одежда",
+      "accessories": "Аксессуары",
+      "office": "Концелярия",
+      "souvenirs": "Сувениры",
+      "order": "Размещение заказа"
     }
   },
+
   "ua": {
+    "common": {
+      "more": "Ще"
+    },
     "header": {
       "menu_btn": "Меню"
     },
@@ -102,6 +139,19 @@
       "notebooks": "Блокноти",
       "t-shirts": "Футболки",
       "main-heading": "Порівняння"
+    },
+    "breadcrumbs": {
+      "main": "Головна",
+      "comparison": "Порівняння",
+      "cart": "Кошик",
+      "favorites": "Обране",
+      "catalog": "Каталог",
+      "profile": "Профіль",
+      "clothes": "Одяг",
+      "accessories": "Аксесуари",
+      "office": "Концелярія",
+      "souvenirs": "Сувениры",
+      "order": "Розміщення замовлення"
     }
   }
 }

@@ -28,7 +28,7 @@ const Menu = () => {
   const { lang, translations } = useLang();
   const pathName = usePathname();
 
-  const isMedia480 = useMediaQuery(BREAKPOINTS.sm);
+  // const isMedia480 = useMediaQuery(BREAKPOINTS.sm);
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
 
   const menuIsOpen = useUnit($menuIsOpen);

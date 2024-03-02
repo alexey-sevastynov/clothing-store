@@ -1,0 +1,42 @@
+@import url('colors.css');
+
+.mobile-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background-color: var(--background);
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.mobile-navbar__btn {
+  min-width: max-content;
+  height: 52px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  color: var(--font);
+  font-style: 14px;
+}
+
+.mobile-navbar__link,
+.mobile-navbar__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 9px;
+}
+
+/* _____________adaptive screen */
+
+@media(max-width: 480px) {
+  .mobile-navbar {
+    padding: 10px 12px;
+  }
+}

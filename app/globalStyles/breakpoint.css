@@ -3,4 +3,18 @@
   --mobile-medium-breakpoint: 480px;
   --tablet-breakpoint: 768px;
   --desktop-breakpoint: 1024px;
+  --desktop-xl-breakpoint: 1200px;
 }
+
+/* ____TEMPLATE____ */
+@media(max-width: 1200px) {}
+
+@media(max-width: 1024px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 768px) {}
+
+@media(max-width: 480px) {}
+
+@media(max-width: 320px) {}

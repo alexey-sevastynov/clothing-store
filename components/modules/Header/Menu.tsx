@@ -21,13 +21,15 @@ import { BREAKPOINTS } from '@/constants/breakpoints';
 import Logo from '@/components/elements/Logo/Logo';
 import Accordion from '../Accordion/Accordion';
 import MenuLinkItem from './MenuLinkItem';
+import BuyersListItems from './BuyersListItems';
+import ContactsListItems from './ContactsListItems';
 
 const Menu = () => {
   const { lang, translations } = useLang();
   const pathName = usePathname();
 
-  const isMedia450 = useMediaQuery(BREAKPOINTS.sm);
-  const isMedia800 = useMediaQuery(BREAKPOINTS.sm);
+  const isMedia480 = useMediaQuery(BREAKPOINTS.sm);
+  const isMedia768 = useMediaQuery(BREAKPOINTS.md);
 
   const menuIsOpen = useUnit($menuIsOpen);
 
@@ -147,6 +149,11 @@ const Menu = () => {
   return (
     <nav className={`menu ${menuIsOpen ? 'open' : 'close'}`}>
       <div className='container menu__container'>
+        {/* logo */}
+        <div className={`menu__logo ${menuIsOpen ? 'open' : ''}`}>
+          <Logo size={110} />
+        </div>
+
         {/* promo background image  */}
         <img
           className={`menu__bg ${menuIsOpen ? 'open' : ''}`}
@@ -154,9 +161,6 @@ const Menu = () => {
           alt='promo image'
           height={800}
         />
-        <div className={`menu__logo ${menuIsOpen ? 'open' : ''}`}>
-          <Logo />
-        </div>
 
         <button
           className={`btn-reset menu__close ${menuIsOpen ? 'open' : ''}`}
@@ -190,7 +194,7 @@ const Menu = () => {
         {/* ______CATEGORIES AVAILEBLE LIST */}
         <ul className={`list-reset menu__list ${menuIsOpen ? 'open' : ''}`}>
           {/* ______CATALOG */}
-          {!isMedia800 && (
+          {!isMedia768 && (
             <li className='menu__list_item'>
               <button
                 className='btn-reset menu__list_item-btn'
@@ -281,98 +285,88 @@ const Menu = () => {
 
           {/* ______FOR BUYERS */}
           <li className='menu__list_item'>
-            <button
-              className='btn-reset menu__list_item-btn'
-              onMouseEnter={handleShowBuyersList}
-            >
-              {translations[lang].main_menu.buyers}
-            </button>
-            <AnimatePresence>
-              {showBuyersList && (
-                <motion.ul
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className='list-reset menu__accordion'
+            {/* If the screen is larger than 768px, it is hidden the "For buyers" button */}
+            {!isMedia768 && (
+              <button
+                className='btn-reset menu__list_item-btn'
+                onMouseEnter={handleShowBuyersList}
+              >
+                {translations[lang].main_menu.buyers}
+              </button>
+            )}
+
+            {/* If the screen is smaller than 768px, it is hidden under the "For buyers" list */}
+            {!isMedia768 && (
+              <AnimatePresence>
+                {showBuyersList && (
+                  <motion.ul
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className='list-reset menu__accordion'
+                  >
+                    <BuyersListItems />
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            )}
+
+            {/* If the screen is larger than 768px, Accordion is visible */}
+            {isMedia768 && (
+              <AnimatePresence>
+                <Accordion
+                  title={translations[lang].main_menu.buyers}
+                  titleClass='btn-reset menu__list_item-btn'
                 >
-                  <li className='menu__accordion_item '>
-                    <Link
-                      href={'/about'}
-                      className='menu__accordion_item-link menu__accordion_item-title'
-                    >
-                      {translations[lang].main_menu.about}
-                    </Link>
-                  </li>
-                  <li className='menu__accordion_item'>
-                    <Link href={'/blog'} className='menu__accordion_item-link'>
-                      {translations[lang].main_menu.blog}
-                    </Link>
-                  </li>
-                  <li className='menu__accordion_item'>
-                    <Link
-                      href={'/shipping-and-payment'}
-                      className='menu__accordion_item-link'
-                    >
-                      {translations[lang].main_menu.shipping}
-                    </Link>
-                  </li>
-                  <li className='menu__accordion_item'>
-                    <Link
-                      href={'/purchase-returns'}
-                      className='menu__accordion_item-link'
-                    >
-                      {translations[lang].main_menu.returns}
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
+                  <ul className='list-reset menu__accordion_item-list'>
+                    <BuyersListItems />
+                  </ul>
+                </Accordion>
+              </AnimatePresence>
+            )}
           </li>
 
           {/* ______CONTACTS */}
           <li className='menu__list_item'>
-            <button
-              className='btn-reset menu__list_item-btn'
-              onMouseEnter={handleShowContactsList}
-            >
-              {translations[lang].main_menu.contacts}
-            </button>
-            <AnimatePresence>
-              {showContactsList && (
-                <motion.ul
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className='list-reset menu__accordion'
+            {/* If the screen is larger than 768px, it is hidden the "Contancts" button */}
+            {!isMedia768 && (
+              <button
+                className='btn-reset menu__list_item-btn'
+                onMouseEnter={handleShowContactsList}
+              >
+                {translations[lang].main_menu.contacts}
+              </button>
+            )}
+
+            {/* If the screen is smaller than 768px, it is hidden under the "Contancts" list */}
+            {!isMedia768 && (
+              <AnimatePresence>
+                {showContactsList && (
+                  <motion.ul
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className='list-reset menu__accordion'
+                  >
+                    <ContactsListItems />
+                  </motion.ul>
+                )}
+              </AnimatePresence>
+            )}
+
+            {/* If the screen is larger than 768px, Accordion is visible */}
+            {isMedia768 && (
+              <AnimatePresence>
+                <Accordion
+                  title={translations[lang].main_menu.contacts}
+                  titleClass='btn-reset menu__list_item-btn'
                 >
-                  <li className='menu__accordion_item '>
-                    <a
-                      href={'tel:+380974211929'}
-                      className='menu__accordion_item-link menu__accordion_item-title'
-                    >
-                      +38 (097) 42-119-29
-                    </a>
-                  </li>
-                  <li className='menu__accordion_item'>
-                    <a
-                      href={'mailto:alexseva94@gmail.com'}
-                      className='menu__accordion_item-link'
-                    >
-                      {translations[lang].main_menu.mail}
-                    </a>
-                  </li>
-                  <li className='menu__accordion_item'>
-                    <Link
-                      href={'https://t.me/alexseva_94'}
-                      target='_blank'
-                      className='menu__accordion_item-link'
-                    >
-                      {translations[lang].main_menu.telegram}
-                    </Link>
-                  </li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
+                  <ul className='list-reset menu__accordion_item-list'>
+                    <ContactsListItems />
+                  </ul>
+                </Accordion>
+              </AnimatePresence>
+            )}
           </li>
         </ul>
       </div>

@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
 
-const Logo = () => {
+import { ILogoProps } from '@/types/elements';
+
+const Logo = ({ size = 60 }: ILogoProps) => {
   return (
     <Link href='/'>
       <img
         className='logo__img'
         src='/img/logo.png'
         alt='Garna-Rich-Logo'
-        width={60}
+        width={size}
       />
     </Link>
   );

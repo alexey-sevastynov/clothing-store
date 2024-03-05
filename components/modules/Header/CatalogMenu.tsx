@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -20,11 +21,13 @@ import { IoMdClose } from 'react-icons/io';
 import Header from './Header';
 import CatalogMenuButton from './CatalogMenuButton';
 import CatalogMenuList from './CatalogMenuList';
+import Accordion from '../Accordion/Accordion';
 
 const CatalogMenu = () => {
   const catalogMenuIsOpen = useStore($catalogMenuIsOpen);
 
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
+  const isMedia480 = useMediaQuery(BREAKPOINTS.sm);
 
   const { itemVariants, sideVariants, popupZindex } = useMenuAnimation(
     2,
@@ -185,7 +188,8 @@ const CatalogMenu = () => {
                       variants={itemVariants}
                       className='catalog-menu__list_item'
                     >
-                      {isMedia768 && (
+                      {/*If the screen is smaller than 768px and larger than 480px, it will be visible the menu */}
+                      {isMedia768 && !isMedia480 && (
                         <>
                           {id === 1 && (
                             <CatalogMenuButton
@@ -210,7 +214,8 @@ const CatalogMenu = () => {
                         </>
                       )}
 
-                      {isMedia768 && (
+                      {/*If the screen is smaller than 768px and larger than 480px, it will be visible under the menu */}
+                      {isMedia768 && !isMedia480 && (
                         <AnimatePresence>
                           {isCurrentList(showClothesList, 1) && (
                             <CatalogMenuList items={items} />
@@ -225,6 +230,30 @@ const CatalogMenu = () => {
                             <CatalogMenuList items={items} />
                           )}
                         </AnimatePresence>
+                      )}
+
+                      {/* If the screen is smaller than 480px, Accordion list menu is visible */}
+                      {isMedia480 && (
+                        <Accordion
+                          title={name}
+                          titleClass='menu__accordion_item-title'
+                        >
+                          <ul className='catalog-menu__accordion_list'>
+                            {items.map((title, index) => (
+                              <li
+                                key={index}
+                                className='catalog-menu__accordion_list-item'
+                              >
+                                <Link
+                                  href='/catalog'
+                                  className='catalog-menu__accordion_list-item-link'
+                                >
+                                  {title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </Accordion>
                       )}
                     </motion.li>
                   );

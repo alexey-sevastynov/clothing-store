@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { useStore } from 'effector-react';
+import { useUnit } from 'effector-react';
 import { $catalogMenuIsOpen, closeCatalogMenu } from '@/context/modals';
 
 import { useLang } from '@/hooks/useLang';
@@ -24,7 +24,7 @@ import CatalogMenuList from './CatalogMenuList';
 import Accordion from '../Accordion/Accordion';
 
 const CatalogMenu = () => {
-  const catalogMenuIsOpen = useStore($catalogMenuIsOpen);
+  const catalogMenuIsOpen = useUnit($catalogMenuIsOpen);
 
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
   const isMedia480 = useMediaQuery(BREAKPOINTS.sm);

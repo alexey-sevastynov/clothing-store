@@ -10,3 +10,9 @@ export const useLang = () => {
 
   return { lang, translations };
 };
+
+//______template for using to component
+// const { lang, translations } = useLang();
+
+//______example to html
+// {translations[lang].main_menu.contacts}

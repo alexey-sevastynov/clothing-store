@@ -162,6 +162,7 @@ const Menu = () => {
           height={800}
         />
 
+        {/* close the menu  */}
         <button
           className={`btn-reset menu__close ${menuIsOpen ? 'open' : ''}`}
           onClick={handleCloseMenu}

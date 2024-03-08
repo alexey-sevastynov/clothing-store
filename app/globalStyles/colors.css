@@ -13,4 +13,7 @@
   --scroll-background: #e8e9ea;
   --scroll: rgb(132, 218, 254);
   --scroll-hover: rgb(107, 208, 251);
+
+  --modal-backgorund: #35384a;
+  --modal-input-backgorund: #51535f;
 }

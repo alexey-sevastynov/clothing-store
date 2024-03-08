@@ -15,9 +15,13 @@ import { FaRegCircleUser } from 'react-icons/fa6';
 
 import { useLang } from '@/hooks/useLang';
 
-import { addOverflowHiddenToBody } from '@/lib/utils/common';
+import {
+  addOverflowHiddenToBody,
+  handleCloseSearchModal,
+} from '@/lib/utils/common';
 
-import { openMenu } from '@/context/modals';
+import { $searchModal, openMenu, openSearchModal } from '@/context/modals';
+import { useUnit } from 'effector-react';
 
 import Logo from '@/components/elements/Logo/Logo';
 import Menu from './Menu';
@@ -25,27 +29,50 @@ import Menu from './Menu';
 const Header = () => {
   const { lang, translations } = useLang();
 
+  const searchModal = useUnit($searchModal);
+
   const handleOpenMenu = () => {
     addOverflowHiddenToBody();
     openMenu();
   };
+
+  const handleSearchModal = () => {
+    openSearchModal();
+    addOverflowHiddenToBody();
+  };
+
   return (
     <header className='header'>
       <div className='container header__container'>
+        {/* ____________________???? */}
+        <div
+          className={`header__search-overlay ${searchModal ? 'overlay-active' : ''}`}
+          onClick={handleCloseSearchModal}
+        />
+
+        {/* ____________________Burger button */}
         <button className='btn-reset header__burger' onClick={handleOpenMenu}>
           <FiAlignJustify />
           {translations[lang].header.menu_btn}
         </button>
         <Menu />
+
+        {/* ____________________LOGO ICON */}
         <div className='header__logo'>
           <Logo />
         </div>
         <ul className='header__links list-reset'>
+          {/* ____________________search ICON */}
           <li className='header__links_item'>
-            <button className='header__links_item-btn header__links_item-btn--search'>
+            <button
+              className='header__links_item-btn header__links_item-btn--search'
+              onClick={handleSearchModal}
+            >
               <IoIosSearch size={24} className='header__links_item-btn-icon' />
             </button>
           </li>
+
+          {/* ____________________favorite ICON */}
           <li className='header__links_item'>
             <Link
               className='header__links_item-btn header__links_item-btn--favorites'
@@ -57,6 +84,8 @@ const Header = () => {
               />
             </Link>
           </li>
+
+          {/* ____________________add ICON */}
           <li className='header__links_item'>
             <Link
               className='header__links_item-btn header__links_item-btn--comparison'
@@ -68,6 +97,8 @@ const Header = () => {
               />
             </Link>
           </li>
+
+          {/* ____________________cart ICON*/}
           <li className='header__links_item'>
             <Link
               className='header__links_item-btn header__links_item-btn--cart'
@@ -79,6 +110,8 @@ const Header = () => {
               />
             </Link>
           </li>
+
+          {/* ____________________user ICON*/}
           <li className='header__links_item'>
             <Link
               className='header__links_item-btn header__links_item-btn--profile'

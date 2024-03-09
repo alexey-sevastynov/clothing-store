@@ -130,7 +130,7 @@ const CatalogMenu = () => {
             className='catalog-menu__aside'
             initial={{ width: 0 }}
             animate={{
-              width: 'calc(100% - 48px)', // 24px ("padding-left") + 24px ("padding-right") = 48px !!!
+              width: '100%',
             }}
             exit={{
               width: 0,

@@ -4,6 +4,9 @@
   --tablet-breakpoint: 768px;
   --desktop-breakpoint: 1024px;
   --desktop-xl-breakpoint: 1200px;
+
+
+  --width-container: 1535px;
 }
 
 /* ____TEMPLATE____ */

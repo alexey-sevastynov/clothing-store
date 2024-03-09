@@ -4,4 +4,6 @@ export type BreakpointsType = {
   md: number;
   lg: number;
   xl: number;
+
+  widthContainer: number;
 };

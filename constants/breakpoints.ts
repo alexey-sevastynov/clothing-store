@@ -7,4 +7,6 @@ export const BREAKPOINTS: Readonly<BreakpointsType> = {
   lg: 1024, // For large screens
   xl: 1200, // For extra large screens
   // Add more breakpoints as needed
+
+  widthContainer: 1535,
 };

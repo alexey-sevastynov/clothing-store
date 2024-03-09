@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('colors.css');
+@import url('breakpoint.css');
 
 * {
   box-sizing: border-box;
@@ -18,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 1535px;
+  max-width: var(--width-container);
   margin: 0 auto;
   padding: 0 15px;
 }

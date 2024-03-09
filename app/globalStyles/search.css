@@ -1,11 +1,11 @@
 @import url('colors.css');
+@import url('breakpoint.css');
 
 :root {
   --padding-edge-size: 24px;
 }
 
 .search {
-  min-width: 850px;
   height: 570px;
 
   position: fixed;
@@ -79,29 +79,13 @@
   color: var(--font-hover);
 }
 
-@media (max-width: 1024px) {
-  .search {
-    min-width: auto;
-    width: 700px;
-  }
-}
 
-@media(max-width: 768px) {
-  .search {
-    width: 450px;
-  }
-}
+
+
+
 
 @media(max-width: 480px) {
   .search {
-    width: 300px;
     padding: 12px;
-  }
-}
-
-@media(max-width: 320px) {
-  .search {
-    width: 280px;
-
   }
 }

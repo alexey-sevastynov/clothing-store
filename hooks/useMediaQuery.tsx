@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 import { getWindowWidth } from '@/lib/utils/common';
 
-const useWindowWidth = () => {
+export const useWindowWidth = () => {
   const [windowWidth, setWindowWidth] = React.useState<{ windowWidth: number }>(
     getWindowWidth()
   );

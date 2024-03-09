@@ -1,10 +1,29 @@
+import { BREAKPOINTS } from '@/constants/breakpoints';
 import { useLang } from '@/hooks/useLang';
+import { useWindowWidth } from '@/hooks/useMediaQuery';
 import { handleCloseSearchModal } from '@/lib/utils/common';
 
 import { IoMdClose } from 'react-icons/io';
 
 const Search = () => {
   const { lang, translations } = useLang();
+
+  const { windowWidth } = useWindowWidth();
+
+  const widthPopupModal = ({
+    windowWidth,
+  }: {
+    windowWidth: number;
+  }): string => {
+    const percentWidth: number = 0.95; // 0.95 this is 95%
+    const { widthContainer } = BREAKPOINTS;
+
+    if (windowWidth > widthContainer) {
+      return widthContainer * percentWidth + 'px';
+    }
+
+    return windowWidth * percentWidth + 'px';
+  };
 
   const handleInputFocus = (
     e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement, Element>
@@ -18,12 +37,11 @@ const Search = () => {
     if (e.target.value) {
       return;
     }
-
     e.target.classList.remove('with_value');
   };
 
   return (
-    <div className='search'>
+    <div className='search' style={{ width: widthPopupModal(windowWidth) }}>
       <button className='search__close' onClick={handleCloseSearchModal}>
         <IoMdClose size={24} />
       </button>

@@ -1,7 +1,10 @@
 'use client';
 import Link from 'next/link';
 
-import { addOverflowHiddenToBody } from '@/lib/utils/common';
+import {
+  addOverflowHiddenToBody,
+  handleCloseSearchModal,
+} from '@/lib/utils/common';
 
 import { useLang } from '@/hooks/useLang';
 
@@ -37,7 +40,7 @@ const MobileNavbar = () => {
   return (
     <>
       <CatalogMenu />
-      <div className='mobile-navbar'>
+      <div className='mobile-navbar' onClick={handleCloseSearchModal}>
         <button className='mobile-navbar__btn'>
           <Link href={'/'} className='mobile-navbar__link'>
             <IoHomeOutline size={24} />

@@ -16,4 +16,10 @@
 
   --modal-backgorund: #35384a;
   --modal-input-backgorund: #51535f;
+
+  --btn: rgb(132, 218, 254);
+  --btn-hover: rgb(107, 208, 251);
+  --btn-active: rgb(90, 203, 252);
+  --btn-disabled: #51535f;
+
 }

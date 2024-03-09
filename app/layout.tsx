@@ -7,6 +7,7 @@ import '@/app/globalStyles/menu.css';
 import '@/app/globalStyles/mobile-navbar.css';
 import '@/app/globalStyles/catalog-menu.css';
 import '@/app/globalStyles/search.css';
+import '@/app/globalStyles/cart-popup.css';
 
 import Layout from '@/components/layouts/Layout';
 

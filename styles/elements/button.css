@@ -1,0 +1,36 @@
+@import url('../../app/globalStyles/colors.css');
+
+.button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: var(--font);
+
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 24px;
+
+  background-color: var(--btn);
+
+  height: 32px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--btn-hover);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:active {
+  background-color: var(--btn-active);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button:disabled {
+  background-color: var(--btn-disabled);
+  pointer-events: none;
+  cursor: none;
+}

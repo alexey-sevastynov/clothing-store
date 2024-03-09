@@ -1,7 +1,9 @@
 {
   "en": {
     "common": {
-      "more": "More"
+      "more": "More",
+      "order_price": "Order Price",
+      "currency": "uah"
     },
     "header": {
       "menu_btn": "Menu",
@@ -55,7 +57,9 @@
 
   "ru": {
     "common": {
-      "more": "Еще"
+      "more": "Еще",
+      "order_price": "Стоимость заказа",
+      "currency": "грн"
     },
     "header": {
       "menu_btn": "Меню",
@@ -109,7 +113,9 @@
 
   "ua": {
     "common": {
-      "more": "Ще"
+      "more": "Ще",
+      "order_price": "Вартість замовлення",
+      "currency": "грн"
     },
     "header": {
       "menu_btn": "Меню",

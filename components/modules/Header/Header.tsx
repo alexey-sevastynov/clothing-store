@@ -25,6 +25,7 @@ import { useUnit } from 'effector-react';
 
 import Logo from '@/components/elements/Logo/Logo';
 import Menu from './Menu';
+import CartPopup from './CartPopup/CartPopup';
 
 const Header = () => {
   const { lang, translations } = useLang();
@@ -100,7 +101,7 @@ const Header = () => {
 
           {/* ____________________cart ICON*/}
           <li className='header__links_item'>
-            <Link
+            {/* <Link
               className='header__links_item-btn header__links_item-btn--cart'
               href='/cart'
             >
@@ -108,7 +109,9 @@ const Header = () => {
                 size={24}
                 className='header__links_item-btn-icon'
               />
-            </Link>
+            </Link> */}
+
+            <CartPopup />
           </li>
 
           {/* ____________________user ICON*/}

@@ -6,11 +6,7 @@ import Link from 'next/link';
 
 import { FiAlignJustify } from 'react-icons/fi';
 import { IoIosSearch } from 'react-icons/io';
-import {
-  MdFavoriteBorder,
-  MdOutlinePlaylistAdd,
-  MdOutlineShoppingBag,
-} from 'react-icons/md';
+import { MdFavoriteBorder, MdOutlinePlaylistAdd } from 'react-icons/md';
 import { FaRegCircleUser } from 'react-icons/fa6';
 
 import { useLang } from '@/hooks/useLang';
@@ -101,16 +97,6 @@ const Header = () => {
 
           {/* ____________________cart ICON*/}
           <li className='header__links_item'>
-            {/* <Link
-              className='header__links_item-btn header__links_item-btn--cart'
-              href='/cart'
-            >
-              <MdOutlineShoppingBag
-                size={24}
-                className='header__links_item-btn-icon'
-              />
-            </Link> */}
-
             <CartPopup />
           </li>
 

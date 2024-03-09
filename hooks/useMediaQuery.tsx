@@ -36,3 +36,11 @@ export const useMediaQuery = (maxWidth: number) => {
 
   return isMedia;
 };
+
+//______template for using to component
+
+// const isMedia320 = useMediaQuery(BREAKPOINTS.xs);
+// const isMedia480 = useMediaQuery(BREAKPOINTS.sm);
+// const isMedia768 = useMediaQuery(BREAKPOINTS.md);
+// const isMedia1024 = useMediaQuery(BREAKPOINTS.lg);
+// const isMedia1200 = useMediaQuery(BREAKPOINTS.xl);

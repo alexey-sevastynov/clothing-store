@@ -52,6 +52,13 @@
       "office": "Office",
       "souvenirs": "Souvenirs",
       "order": "Placing an order"
+    },
+    "footer": {
+      "copyright": "'Garna Rich' All rights reserved",
+      "policy": "Data processing policy",
+      "privacy": "Privacy Policy",
+      "mobile_version": "Mobile version",
+      "full_version": "Full version of the site"
     }
   },
 
@@ -108,6 +115,13 @@
       "office": "Концелярия",
       "souvenirs": "Сувениры",
       "order": "Размещение заказа"
+    },
+    "footer": {
+      "copyright": "'Garna Rich' Все права защишены",
+      "policy": "Политика обработки данных",
+      "privacy": "Политика Конфиденсальности",
+      "mobile_version": "Мобильная версия",
+      "full_version": "Полная версия сайта"
     }
   },
 
@@ -164,6 +178,13 @@
       "office": "Концелярія",
       "souvenirs": "Сувениры",
       "order": "Розміщення замовлення"
+    },
+    "footer": {
+      "copyright": "'Garna Rich' Усі права захищені",
+      "policy": "Політика обробки даних",
+      "privacy": "Політика Конфіденсальності",
+      "mobile_version": "Мобільна версія",
+      "full_version": "Повна версія сайту"
     }
   }
 }

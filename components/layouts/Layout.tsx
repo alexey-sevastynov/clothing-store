@@ -13,6 +13,7 @@ import { $searchModal } from '@/context/modals';
 import Header from '../modules/Header/Header';
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar';
 import Search from '../modules/Header/Search';
+import Footer from '../modules/Footer/Footer';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
@@ -36,6 +37,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           <Search />
         </motion.div>
       )}
+
+      <Footer />
     </>
   );
 };

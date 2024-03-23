@@ -1,0 +1,27 @@
+@import url('@/app/globalStyles/colors.css');
+
+.ad {
+  padding: 3px;
+
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  width: max-content;
+
+  background-color: var(--modal-backgorund);
+
+  opacity: 0.7;
+
+  border-radius: 24px;
+
+}
+
+.ad__title,
+.ad__icon {
+  color: var(--font);
+}
+
+.ad__title {
+  font-size: 16px;
+}

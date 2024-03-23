@@ -1,0 +1,13 @@
+@function adaptive-font(
+  $min-font-size,
+  $max-font-size,
+  $min-width,
+  $max-width
+) {
+  $font-range: $max-font-size - $min-font-size;
+  $viewport-range: $max-width - $min-width;
+
+  @return calc(
+    #{$min-font-size}px + #{$font-range} * ((100vw - #{$min-width}px) / #{$viewport-range})
+  );
+}

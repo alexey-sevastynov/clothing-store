@@ -3,7 +3,8 @@
     "common": {
       "more": "More",
       "order_price": "Order Price",
-      "currency": "uah"
+      "currency": "uah",
+      "ad": "Ad"
     },
     "header": {
       "menu_btn": "Menu",
@@ -59,6 +60,30 @@
       "privacy": "Privacy Policy",
       "mobile_version": "Mobile version",
       "full_version": "Full version of the site"
+    },
+    "main_page": {
+      "hero_hidden_title": "Clothing store 'Garna Rich'",
+      "hero_title": "Garna Rich",
+      "hero_description": "Be in style",
+      "hero_subtitle": "stock clothing",
+      "catalog_btn": "Catalog",
+      "category_title": "Categories",
+      "category_cloth": "Cloth",
+      "category_office": "Office",
+      "category_accessories": "Accessories",
+      "category_souvenirs": "Souvenirs",
+      "bestsellers_title": "Bestsellers",
+      "new_title": "New",
+      "brand_title": "Life of our brand",
+      "brand_nature": "With care for nature",
+      "brand_look": "New look at merch",
+      "brand_idea": "Idea of the collection «Black»",
+      "is_new": "New",
+      "is_bestseller": "Bestseller",
+      "tShirt": "T-Shirt",
+      "blue": "blue",
+      "yellow": "yellow",
+      "white": "white"
     }
   },
 
@@ -66,7 +91,8 @@
     "common": {
       "more": "Еще",
       "order_price": "Стоимость заказа",
-      "currency": "грн"
+      "currency": "грн",
+      "ad": "Реклама"
     },
     "header": {
       "menu_btn": "Меню",
@@ -122,6 +148,30 @@
       "privacy": "Политика Конфиденсальности",
       "mobile_version": "Мобильная версия",
       "full_version": "Полная версия сайта"
+    },
+    "main_page": {
+      "hero_hidden_title": "Магазин одежды 'Garna Rich'",
+      "hero_title": "Garna Rich",
+      "hero_description": "Будь в стиле",
+      "hero_subtitle": "стоковая одежда",
+      "catalog_btn": "Каталог",
+      "category_title": "Категории",
+      "category_cloth": "Ткань",
+      "category_office": "Офис",
+      "category_accessories": "Аксессуары",
+      "category_souvenirs": "Сувениры",
+      "bestsellers_title": "Бестселлеры",
+      "new_title": "Новинки",
+      "brand_title": "Жизнь нашего бренда",
+      "brand_nature": "С заботой о природе",
+      "brand_look": "Новый взгляд на товары",
+      "brand_idea": "Идея коллекции 'Черный'",
+      "is_new": "Новинки",
+      "is_bestseller": "Бестселлер",
+      "tShirt": "Футболка",
+      "blue": "синяя",
+      "yellow": "жолтая",
+      "white": "чорная"
     }
   },
 
@@ -129,7 +179,8 @@
     "common": {
       "more": "Ще",
       "order_price": "Вартість замовлення",
-      "currency": "грн"
+      "currency": "грн",
+      "ad": "Реклама"
     },
     "header": {
       "menu_btn": "Меню",
@@ -185,6 +236,30 @@
       "privacy": "Політика Конфіденсальності",
       "mobile_version": "Мобільна версія",
       "full_version": "Повна версія сайту"
+    },
+    "main_page": {
+      "hero_hidden_title": "Магазин одягу 'Garna Rich'",
+      "hero_title": "Garna Rich",
+      "hero_description": "Будь в стилі",
+      "hero_subtitle": "стоковий одяг",
+      "catalog_btn": "Каталог",
+      "category_title": "Категорії",
+      "category_cloth": "Тканина",
+      "category_office": "Офіс",
+      "category_accessories": "Аксесуари",
+      "category_souvenirs": "Сувеніри",
+      "bestsellers_title": "Бестселери",
+      "new_title": "Новинки",
+      "brand_title": "Життя нашого бренду",
+      "brand_nature": "З дбайливістю до природи",
+      "brand_look": "Новий погляд на товари",
+      "brand_idea": "Ідея колекції 'Чорний'",
+      "is_new": "Новинки",
+      "is_bestseller": "Бестселер",
+      "tShirt": "Футболка",
+      "blue": "синя",
+      "yellow": "жовта",
+      "white": "чорна"
     }
   }
 }

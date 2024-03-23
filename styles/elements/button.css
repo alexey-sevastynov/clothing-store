@@ -1,4 +1,4 @@
-@import url('../../app/globalStyles/colors.css');
+@import url('@/app/globalStyles/colors.css');
 
 .button {
   text-decoration: none;

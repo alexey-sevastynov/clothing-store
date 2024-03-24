@@ -1,6 +1,7 @@
 {
   "en": {
     "common": {
+      "all_link": "All",
       "more": "More",
       "order_price": "Order Price",
       "currency": "uah",
@@ -89,6 +90,7 @@
 
   "ru": {
     "common": {
+      "all_link": "Все",
       "more": "Еще",
       "order_price": "Стоимость заказа",
       "currency": "грн",
@@ -177,6 +179,7 @@
 
   "ua": {
     "common": {
+      "all_link": "Усе",
       "more": "Ще",
       "order_price": "Вартість замовлення",
       "currency": "грн",

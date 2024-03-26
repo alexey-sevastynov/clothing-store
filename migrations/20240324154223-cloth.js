@@ -8,20 +8,7 @@ const collections = ['street', 'black', 'casual', 'orange', 'line'];
 const colors = ['purpure', 'yellow', 'orange', 'black', 'white'];
 const compositions = ['cotton', 'synthetics', 'polyester'];
 const clothTypes = ['t-shirts', 'long-sleeves', 'hoodie', 'outerwear'];
-const images = [
-  '/img/clothes/1.jpg',
-  '/img/clothes/2.jpg',
-  '/img/clothes/3.jpg',
-  '/img/clothes/4.jpg',
-  '/img/clothes/5.jpg',
-  '/img/clothes/6.jph',
-  '/img/clothes/7.jph',
-];
-const lineImages = [
-  '/img/t-shirt-blue.png',
-  '/img/t-shirt-white.png',
-  '/img/t-shirt-yellow.png',
-];
+
 const fabricTypes = [
   'natural',
   'non-natural',

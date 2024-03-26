@@ -7,7 +7,7 @@ export interface IProduct {
   name: string;
   description: string;
   characteristics: { [index: string]: string };
-  images: string[];
+  images: string;
   vendorCode: string;
   inStock: string;
   isBestseller: boolean;

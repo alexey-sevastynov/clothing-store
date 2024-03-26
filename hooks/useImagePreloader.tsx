@@ -4,8 +4,10 @@ const useImagePreloader = () => {
   const [imgSpinner, setImgSpinner] = useState(true);
 
   const handleLoadingImageComplete = async (img: HTMLImageElement) => {
-    img.classList.remove('opacity-0');
-    setImgSpinner(false);
+    if (img && img.classList && img.classList.remove) {
+      img.classList.remove('opacity-0');
+      setImgSpinner(false);
+    }
   };
 
   return { handleLoadingImageComplete, imgSpinner };

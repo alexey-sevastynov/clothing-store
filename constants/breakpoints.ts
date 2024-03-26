@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { BreakpointsType } from '@/types/constants';
 
 export const BREAKPOINTS: Readonly<BreakpointsType> = {

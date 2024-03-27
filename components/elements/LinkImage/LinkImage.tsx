@@ -14,7 +14,7 @@ const LinkImage: React.FC<ILinkImageProps> = ({ image, text, ...props }) => {
         src={image}
         alt={text}
         className='transition-opacity opacity-0 duration'
-        onLoadingComplete={handleLoadingImageComplete}
+        onLoad={handleLoadingImageComplete}
       />
       <span>{text}</span>
     </Link>

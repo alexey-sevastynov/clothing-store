@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 
 import { getWindowWidth } from '@/lib/utils/common';
+import { BreakpointsType } from '@/types/constants';
+import { BREAKPOINTS } from '@/constants/breakpoints';
 
 export const useWindowWidth = () => {
   const [windowWidth, setWindowWidth] = React.useState<{ windowWidth: number }>(
@@ -25,6 +27,11 @@ export const useMediaQuery = (maxWidth: number) => {
   } = useWindowWidth();
 
   const [isMedia, setIsMedia] = React.useState<boolean>(false);
+
+  // added possibility to check const BREAKPOINTS by value only, as in Object interface
+  if (!Object.values(BREAKPOINTS).includes(maxWidth)) {
+    throw new Error(`Invalid breakpoint value: ${maxWidth}`);
+  }
 
   useEffect(() => {
     if (windowWidth <= maxWidth) {

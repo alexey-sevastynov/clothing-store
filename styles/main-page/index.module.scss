@@ -1,5 +1,4 @@
-@import url('../../app/globalStyles/colors.css');
-@import url('../common/common.scss');
+@import '../../app/globalStyles/colors.scss';
 
 @function adaptive-font(
   $min-font-size,
@@ -26,7 +25,7 @@
 
   padding-bottom: 200px;
 
-  background: var(--gradient-hero);
+  background: $gradient-hero;
 
   &__container {
     position: relative;
@@ -60,7 +59,7 @@
     &__text {
       position: relative;
 
-      color: var(--font);
+      color: $font;
       font-size: adaptive-font(52, 200, 320, 1800);
       font-weight: 700;
 
@@ -68,7 +67,7 @@
         position: absolute;
         top: 14%;
         left: 15%;
-        color: var(--font);
+        color: $font;
         font-size: adaptive-font(10, 20, 320, 1800);
         font-weight: 400;
       }
@@ -307,7 +306,7 @@
       opacity: 0;
       top: 0;
       left: 0;
-      color: var(--font);
+      color: $font;
       font-size: 22px;
       font-weight: 400;
       border-radius: 26px 0px 26px 0px;

@@ -1,0 +1,33 @@
+$background: #1d2533;
+$background-darkest: #111720;
+
+$font: #e8e9ea;
+$font-dark: #111720;
+$font-hover: rgb(181, 230, 251);
+
+$icons: #e8e9ea;
+$icons-hover: rgb(181, 230, 251);
+
+$scroll-background: #e8e9ea;
+$scroll: rgb(132, 218, 254);
+$scroll-hover: rgb(107, 208, 251);
+
+$modal-background: #35384a;
+$modal-input-background: #51535f;
+
+$btn: rgb(132, 218, 254);
+$btn-hover: rgb(107, 208, 251);
+$btn-active: rgb(90, 203, 252);
+$btn-disabled: #51535f;
+
+$gradient-hero: radial-gradient(
+    112.11% 111.8% at 100% 0%,
+    #4075ff 0%,
+    rgba(64, 117, 255, 0) 100%
+  ),
+  radial-gradient(
+    111.72% 111.46% at 27% 0%,
+    #16d9a6 0%,
+    rgba(22, 217, 166, 0) 100%
+  ),
+  #9466ff;

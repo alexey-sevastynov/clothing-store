@@ -44,7 +44,7 @@ export const $quickModal = modals
   .on(closeQuickModal, () => false);
 
 //Size table
-export const $showSizeTable = modals
+export const $sizeTable = modals
   .createStore(false)
   .on(openSizeTable, () => true)
   .on(closeSizeTable, () => false);

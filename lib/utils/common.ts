@@ -1,4 +1,4 @@
-import { closeSearchModal } from '@/context/modals';
+import { closeSearchModal, closeSizeTable } from '@/context/modals';
 import { ICartItem } from '@/types/cart';
 
 export const removeOverflowHiddenFromBody = () => {
@@ -72,3 +72,11 @@ export const getCartItemCountBySize = (
 ) =>
   cartItems.find((item) => item.size === currentSize.toLocaleLowerCase())
     ?.count || 0;
+
+export const closeSizeTableByCheck = (isOpenQuickViewModal: boolean) => {
+  if (!isOpenQuickViewModal) {
+    removeOverflowHiddenFromBody();
+  }
+
+  closeSizeTable();
+};

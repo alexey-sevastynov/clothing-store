@@ -1,18 +1,24 @@
 'use client';
 import { useUnit } from 'effector-react';
 
-import { $quickModal, closeQuickModal } from '@/context/modals';
-import { removeOverflowHiddenFromBody } from '@/lib/utils/common';
+import { $quickModal, closeQuickModal, $sizeTable } from '@/context/modals';
+import {
+  closeSizeTableByCheck,
+  removeOverflowHiddenFromBody,
+} from '@/lib/utils/common';
 
 import Layout from './Layout';
 
 const PagesLayout = ({ children }: { children: React.ReactNode }) => {
   const showQuickViewModal = useUnit($quickModal);
+  const showSizeTable = useUnit($sizeTable);
 
   const handleCloseQuickViewModal = () => {
     removeOverflowHiddenFromBody();
     closeQuickModal();
   };
+
+  const handleCloseSizeTable = () => closeSizeTableByCheck(showQuickViewModal);
 
   return (
     <html lang='en'>
@@ -23,6 +29,14 @@ const PagesLayout = ({ children }: { children: React.ReactNode }) => {
         <div
           className={`quick-view-modal-overlay ${showQuickViewModal ? 'overlay-active' : ''}`}
           onClick={() => handleCloseQuickViewModal()}
+        />
+
+        {/* The Modal size table modal for show size clothes */}
+        <div
+          className={`size-table-overlay ${
+            showSizeTable ? 'overlay-active' : ''
+          }`}
+          onClick={handleCloseSizeTable}
         />
       </body>
     </html>

@@ -8,19 +8,21 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { BREAKPOINTS } from '@/constants/breakpoints';
 
 import { useUnit } from 'effector-react';
-import { $quickModal, $searchModal, openQuickModal } from '@/context/modals';
+import { $quickModal, $searchModal, $sizeTable } from '@/context/modals';
 
 import Header from '../modules/Header/Header';
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar';
 import Search from '../modules/Header/Search';
 import Footer from '../modules/Footer/Footer';
 import QuickViewModal from '../modules/QuickViewModal/QuickViewModal';
+import SizeTable from '../modules/SizeTable/SizeTable';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const showQuickViewModal = useUnit($quickModal);
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
 
-  const searchModal = useUnit($searchModal);
+  const isOpenSearchModal = useUnit($searchModal);
+  const isOpenSizeTable = useUnit($sizeTable);
   return (
     <>
       <Header />
@@ -43,8 +45,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </AnimatePresence>
       )}
 
+      {isOpenSizeTable && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <SizeTable />
+        </motion.div>
+      )}
+
       {/* When click on icon "Search", than opened Search Modal Window  */}
-      {searchModal && (
+      {isOpenSearchModal && (
         <motion.div
           initial={{ opacity: 0, zIndex: 3 }}
           animate={{ opacity: 1 }}

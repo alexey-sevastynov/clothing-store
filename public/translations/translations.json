@@ -128,6 +128,16 @@
       "cotton": "Cotton",
       "synthetics": "Synthetic",
       "polyester": "Polyester"
+    },
+    "size_table": {
+      "head_circumference": "Head circumference, cm",
+      "size": "Size",
+      "russian_size": "Ukraine size",
+      "manufacturer_size": "Manufacturer size",
+      "chest_circumference": "Chest circumference, cm",
+      "waist_circumference": "Waist circumference, cm",
+      "hip_circumference": "Hip circumference, cm",
+      "title": "Size table"
     }
   },
 
@@ -260,6 +270,16 @@
       "cotton": "Хлопок",
       "synthetics": "Синтетика",
       "polyester": "Полиэстер"
+    },
+    "size_table": {
+      "head_circumference": "Обхват головы, см",
+      "size": "Размер",
+      "russian_size": "Украинский размер",
+      "manufacturer_size": "Размер производителя",
+      "chest_circumference": "Обхват груди, в см",
+      "waist_circumference": "Обхват талии, в см",
+      "hip_circumference": "Обхват бедер, в см",
+      "title": "Таблица размеров"
     }
   },
 
@@ -392,6 +412,16 @@
       "cotton": "Бавовна",
       "synthetics": "Синтетика",
       "polyester": "Поліестер"
+    },
+    "size_table": {
+      "head_circumference": "Обхват голови, см",
+      "size": "Розмір",
+      "russian_size": "Український розмір",
+      "manufacturer_size": "Розмір виробника",
+      "chest_circumference": "Обхват грудей, у см",
+      "waist_circumference": "Обхват талії, в см",
+      "hip_circumference": "Обхват стегон, у см",
+      "title": "Таблиця розмірів"
     }
   }
 }

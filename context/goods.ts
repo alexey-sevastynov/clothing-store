@@ -1,8 +1,11 @@
 'use client';
-import { Effect, createDomain, createEffect, sample } from 'effector';
+import { Effect, createDomain, createEffect, forward, sample } from 'effector';
 import { Gate, createGate } from 'effector-react';
 // import toast from 'react-hot-toast';
 import { getBestsellerProductsFx, getNewProductsFx } from '@/api/main-page';
+import { IProduct } from '@/types/common';
+import { getOneProductFx } from '@/api/goods';
+import { ILoadOneProductFx } from '@/types/goods';
 // import { IProduct } from '@/types/common';
 // import { ILoadOneProductFx } from '@/types/goods';
 // import api from '../api/apiInstance';
@@ -43,8 +46,8 @@ const goods = createDomain();
 
 export const MainPageGate = createGate();
 
-// export const setCurrentProduct = goods.createEvent<IProduct>();
-// export const loadOneProduct = goods.createEvent<ILoadOneProductFx>();
+export const setCurrentProduct = goods.createEvent<IProduct>();
+export const loadOneProduct = goods.createEvent<ILoadOneProductFx>();
 
 const goodsStoreInstance = (effect: Effect<void, [], Error>) =>
   goods
@@ -69,14 +72,12 @@ export const $bestsellerProducts = goodsStoreInstance(getBestsellerProductsFx);
 goodsSampleInstance(getNewProductsFx, MainPageGate);
 goodsSampleInstance(getBestsellerProductsFx, MainPageGate);
 
-// export const $currentProduct = goods
-//   .createStore<IProduct>({} as IProduct)
-//   .on(setCurrentProduct, (_, product) => product)
-//   .on(loadOneProductFx.done, (_, { result }) => result.productItem);
+export const $currentProduct = goods
+  .createStore<IProduct>({} as IProduct)
+  .on(setCurrentProduct, (_, product) => product)
+  .on(getOneProductFx.done, (_, { result }) => result.productItem);
 
-// sample({
-//   clock: loadOneProduct,
-//   source: $currentProduct,
-//   fn: (_, data) => data,
-//   target: loadOneProductFx,
-// });
+sample({
+  clock: loadOneProduct,
+  source: $currentProduct,
+});

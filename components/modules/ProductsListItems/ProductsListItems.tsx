@@ -13,6 +13,9 @@ import { IProductsListItemProps } from '@/types/modules';
 
 import { addOverflowHiddenToBody, formatPrice } from '@/lib/utils/common';
 
+import { openQuickModal } from '@/context/modals';
+import { setCurrentProduct } from '@/context/goods';
+
 import ProductSubtitle from '@/components/elements/ProductSubtitle/ProductSubtitle';
 import ProductLabel from './ProductLabel';
 import ProductItemActionBtn from '@/components/elements/ProductItemActionBtn/ProductItemActionBtn';
@@ -53,11 +56,11 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
   //   addToComparisonSpinner,
   // } = useComparisonAction(item);
 
-  // const handleShowQuickViewModal = () => {
-  //   addOverflowHiddenToBody();
-  //   showQuickViewModal();
-  //   setCurrentProduct(item);
-  // };
+  const handleShowQuickViewModal = () => {
+    addOverflowHiddenToBody();
+    openQuickModal();
+    setCurrentProduct(item);
+  };
 
   // const addToCart = () => {
   //   setIsAddToFavorites(false);
@@ -146,7 +149,7 @@ const ProductsListItem = ({ item, title }: IProductsListItemProps) => {
               <ProductItemActionBtn
                 text={translations[lang].product.quick_view}
                 iconClass='actions__btn_quick_view'
-                // callback={handleShowQuickViewModal}
+                callback={handleShowQuickViewModal}
               />
             )}
           </div>

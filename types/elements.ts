@@ -1,5 +1,6 @@
 import { StaticImageData } from 'next/image';
 import { LinkHTMLAttributes } from 'react';
+import { CustomArrowProps } from 'react-slick';
 
 export interface ILogoProps {
   size?: number;
@@ -27,4 +28,8 @@ export interface IProductItemActionBtnProps {
 export interface IProductAvailableProps {
   vendorCode: string;
   inStock: number;
+}
+
+export interface IQuickViewModalSliderArrowProps extends CustomArrowProps {
+  directionClassName: string;
 }

@@ -6,15 +6,15 @@ const collections = ['street', 'black', 'casual', 'orange', 'white'];
 const colors = ['purpure', 'yellow', 'orange', 'black', 'white'];
 const compositions = ['cotton', 'synthetics', 'polyester'];
 const accessoryTypes = ['bags', 'headdress', 'umbrella'];
-const images = [
-  '/img/clothes/1.jpg',
-  '/img/clothes/2.jpg',
-  '/img/clothes/3.jpg',
-  '/img/clothes/4.jpg',
-  '/img/clothes/5.jpg',
-  '/img/clothes/6.jph',
-  '/img/clothes/7.jph',
-];
+// const images = [
+//   '/img/clothes/1.jpg',
+//   '/img/clothes/2.jpg',
+//   '/img/clothes/3.jpg',
+//   '/img/clothes/4.jpg',
+//   '/img/clothes/5.jpg',
+//   '/img/clothes/6.jph',
+//   '/img/clothes/7.jph',
+// ];
 const wearingMethod = ['in hand', 'on shoulder', 'over shoulder'];
 const textures = ['nubuck', 'nappa', 'suede', 'naplak'];
 const styles = ['bucket bag', 'retro style', 'sports', 'travel'];

@@ -12,6 +12,12 @@ export const closeCatalogMenu = modals.createEvent();
 //Search
 export const openSearchModal = modals.createEvent();
 export const closeSearchModal = modals.createEvent();
+//Quick Modal for card item
+export const openQuickModal = modals.createEvent();
+export const closeQuickModal = modals.createEvent();
+//Size table
+export const openSizeTable = modals.createEvent();
+export const closeSizeTable = modals.createEvent();
 
 //Menu
 export const $menuIsOpen = modals
@@ -30,3 +36,15 @@ export const $searchModal = modals
   .createStore(false)
   .on(openSearchModal, () => true)
   .on(closeSearchModal, () => false);
+
+//Quick Modal for card item
+export const $quickModal = modals
+  .createStore(false)
+  .on(openQuickModal, () => true)
+  .on(closeQuickModal, () => false);
+
+//Size table
+export const $showSizeTable = modals
+  .createStore(false)
+  .on(openSizeTable, () => true)
+  .on(closeSizeTable, () => false);

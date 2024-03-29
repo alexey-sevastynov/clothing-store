@@ -1,21 +1,23 @@
 'use client';
 import React from 'react';
 
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 import { BREAKPOINTS } from '@/constants/breakpoints';
 
 import { useUnit } from 'effector-react';
-import { $searchModal } from '@/context/modals';
+import { $quickModal, $searchModal, openQuickModal } from '@/context/modals';
 
 import Header from '../modules/Header/Header';
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar';
 import Search from '../modules/Header/Search';
 import Footer from '../modules/Footer/Footer';
+import QuickViewModal from '../modules/QuickViewModal/QuickViewModal';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+  const showQuickViewModal = useUnit($quickModal);
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
 
   const searchModal = useUnit($searchModal);
@@ -26,6 +28,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* If the window width is larger than 768 px,  the mobile navigation bar is visible  */}
       {isMedia768 && <MobileNavbar />}
+
+      {!isMedia768 && (
+        <AnimatePresence>
+          {showQuickViewModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <QuickViewModal />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
 
       {/* When click on icon "Search", than opened Search Modal Window  */}
       {searchModal && (

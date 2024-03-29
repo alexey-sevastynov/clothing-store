@@ -14,6 +14,7 @@ import { useLang } from '@/hooks/useLang';
 import {
   addOverflowHiddenToBody,
   handleCloseSearchModal,
+  handleOpenAuthPopup,
 } from '@/lib/utils/common';
 
 import { $searchModal, openMenu, openSearchModal } from '@/context/modals';
@@ -102,7 +103,16 @@ const Header = () => {
 
           {/* ____________________user ICON*/}
           <li className='header__links_item'>
-            <Link
+            <button
+              className='header__links_item-btn header__links_item-btn--profile'
+              onClick={handleOpenAuthPopup}
+            >
+              <FaRegCircleUser
+                size={24}
+                className='header__links_item-btn-icon'
+              />
+            </button>
+            {/* <Link
               className='header__links_item-btn header__links_item-btn--profile'
               href='/profile'
             >
@@ -110,7 +120,7 @@ const Header = () => {
                 size={24}
                 className='header__links_item-btn-icon'
               />
-            </Link>
+            </Link> */}
           </li>
         </ul>
       </div>

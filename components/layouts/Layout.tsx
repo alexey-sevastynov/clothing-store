@@ -9,6 +9,7 @@ import { BREAKPOINTS } from '@/constants/breakpoints';
 
 import { useUnit } from 'effector-react';
 import { $quickModal, $searchModal, $sizeTable } from '@/context/modals';
+import { $openAuthPopup } from '@/context/auth';
 
 import Header from '../modules/Header/Header';
 import MobileNavbar from '../modules/MobileNavbar/MobileNavbar';
@@ -17,12 +18,16 @@ import Footer from '../modules/Footer/Footer';
 import QuickViewModal from '../modules/QuickViewModal/QuickViewModal';
 import SizeTable from '../modules/SizeTable/SizeTable';
 
+import AuthPopup from '../modules/AuthPopup/AuthPopup';
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const showQuickViewModal = useUnit($quickModal);
   const isMedia768 = useMediaQuery(BREAKPOINTS.md);
 
   const isOpenSearchModal = useUnit($searchModal);
   const isOpenSizeTable = useUnit($sizeTable);
+
+  const isOpenAuthPopup = useUnit($openAuthPopup);
   return (
     <>
       <Header />
@@ -30,6 +35,22 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
       {/* If the window width is larger than 768 px,  the mobile navigation bar is visible  */}
       {isMedia768 && <MobileNavbar />}
+
+      <AnimatePresence>
+        {isOpenAuthPopup && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            className='auth-popup-wrapper'
+            // onClick={handleCloseAuthPopupByTarget}
+            // ref={authWrapperRef}
+          >
+            <AuthPopup />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {!isMedia768 && (
         <AnimatePresence>

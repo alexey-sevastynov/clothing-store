@@ -6,8 +6,6 @@ import Image from 'next/image';
 import styles from '@/styles/main-page/index.module.scss';
 
 import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 import useImagePreloader from '@/hooks/useImagePreloader';
 

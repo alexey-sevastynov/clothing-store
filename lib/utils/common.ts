@@ -1,3 +1,4 @@
+import { closeAuthPopup, openAuthPopup } from '@/context/auth';
 import { closeSearchModal, closeSizeTable } from '@/context/modals';
 import { ICartItem } from '@/types/cart';
 
@@ -79,4 +80,26 @@ export const closeSizeTableByCheck = (isOpenQuickViewModal: boolean) => {
   }
 
   closeSizeTable();
+};
+
+export const handleOpenAuthPopup = () => {
+  addOverflowHiddenToBody();
+  openAuthPopup();
+};
+
+export const handleCloseAuthPopup = () => {
+  removeOverflowHiddenFromBody();
+  closeAuthPopup();
+};
+
+export const closeAuthPopupWhenSomeModalOpened = (
+  showQuickViewModal: boolean,
+  showSizeTable: boolean
+) => {
+  if (showQuickViewModal || showSizeTable) {
+    closeAuthPopup();
+    return;
+  }
+
+  handleCloseAuthPopup();
 };

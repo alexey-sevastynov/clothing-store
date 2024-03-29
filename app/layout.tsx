@@ -9,6 +9,9 @@ import '@/app/globalStyles/catalog-menu.css';
 import '@/app/globalStyles/search.css';
 import '@/app/globalStyles/cart-popup.css';
 import '@/app/globalStyles/footer.css';
+import '@/app/globalStyles/auth-popup.css';
+import '@/app/globalStyles/slick-theme.css';
+import '@/app/globalStyles/slick.css';
 
 import PagesLayout from '@/components/layouts/PagesLayout';
 
